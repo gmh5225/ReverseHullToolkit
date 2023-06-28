@@ -35,6 +35,8 @@ void FReverseHullToolkitModule::StartupModule()
 	FGlobalTabmanager::Get()->RegisterNomadTabSpawner(ReverseHullToolkitTabName, FOnSpawnTab::CreateRaw(this, &FReverseHullToolkitModule::OnSpawnPluginTab))
 		.SetDisplayName(LOCTEXT("FReverseHullToolkitTabTitle", "ReverseHullToolkit"))
 		.SetMenuType(ETabSpawnerMenuType::Hidden);
+	
+
 }
 
 void FReverseHullToolkitModule::ShutdownModule()
@@ -155,9 +157,9 @@ void FReverseHullToolkitModule::RegisterMenus()
 	FToolMenuOwnerScoped OwnerScoped(this);
 
 	{
-		UToolMenu* Menu = UToolMenus::Get()->ExtendMenu("LevelEditor.MainMenu.Window");
+		UToolMenu* Menu = UToolMenus::Get()->ExtendMenu("LevelEditor.MainMenu.Tools");
 		{
-			FToolMenuSection& Section = Menu->FindOrAddSection("WindowLayout");
+			FToolMenuSection& Section = Menu->FindOrAddSection("ToolsToolsRhs");
 			Section.AddMenuEntryWithCommandList(FReverseHullToolkitCommands::Get().OpenPluginWindow, PluginCommands);
 		}
 	}
