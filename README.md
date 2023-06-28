@@ -27,4 +27,4 @@ The Tool will generate the hull for the outline and automatically place it under
 You may have noticed a check box in the tab: that enables the mesh compacting step that addresses the problem that you see in the square outline.
 Currently it is still not implemented so it will simply generate the simple hull instead.
 
-As a rule of thumb you can use the simple hull process when the mesh does not have "holes", which means that every face shares one or more vertices between other faces.
+As a rule of thumb you can use the simple hull process when the mesh does not have "holes", which means that every face shares one or more vertices with other faces.
